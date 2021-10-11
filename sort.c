@@ -75,9 +75,6 @@ void	atob(int n, t_inlst **ahead, t_inlst **bhead)
 		p2 = curr->content;
 	}
 
-
-
-	// printf("A pivot 1: %d pivot 2: %d\n", p1,p2);
 	while (n--)
 	{
 		if ((*ahead)->next->content >= p1)
@@ -106,7 +103,6 @@ void	atob(int n, t_inlst **ahead, t_inlst **bhead)
 	{
 		rrb(bhead);
 	}
-	// printf("nra %d / npb %d / nrb %d\n", nra, npb, nrb);
 	atob(nra, ahead, bhead);
 	btoa(nrb, ahead, bhead);
 	btoa(npb - nrb, ahead, bhead);
@@ -190,10 +186,6 @@ void	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 
 	i = n/2;
 	curr = (*bhead)->next;
-	// while (i--)
-	// {
-	// 	curr = curr->next;
-	// }
 
 	if (curr->content > curr->next->content)
 	{
@@ -205,10 +197,6 @@ void	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 		p1 = curr->content;
 		p2 = curr->prev->content;
 	}
-
-	// p1 = (*bhead)->next->next->content;
-	// p2 = (*bhead)->next->prev->content;
-	// printf("B pivot 1: %d pivot 2: %d\n", p1,p2);
 
 	while (n--)
 	{
@@ -229,8 +217,6 @@ void	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 		}
 
 	}
-	// printf("nrb %d / npa %d / nra %d\n", nrb, npa, nra);
-
 	atob(npa - nra, ahead, bhead);
 	i = nra;
 	while(i--)

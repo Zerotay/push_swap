@@ -7,7 +7,7 @@ all: $(NAME)
 $(NAME) :
 		gcc *.c -o $@ -L. -lft -I.
 
-		 ./push_swap 5 4 8 1 6 7 3 2
+		#  ./push_swap 5 4 8 1 6 7 3 2
 
 
 clean:

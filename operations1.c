@@ -1,5 +1,11 @@
 #include <push_swap.h>
 
+void	swap(t_inlst **head)
+{
+	t_inlst	*before;
+
+}
+
 void	sa(t_inlst **head)
 {
 	t_inlst	*before;
@@ -22,7 +28,7 @@ void	sa(t_inlst **head)
 
 		(*head)->next = (*head)->next->next;
 	}
-	printf("SA\n");
+	printf("sa\n");
 }
 
 void	sb(t_inlst **head)
@@ -47,7 +53,7 @@ void	sb(t_inlst **head)
 
 		(*head)->next = (*head)->next->next;
 	}
-	printf("SB\n");
+	printf("sb\n");
 }
 
 void	ss(t_inlst **ahead, t_inlst **bhead)
@@ -84,7 +90,7 @@ void	ss(t_inlst **ahead, t_inlst **bhead)
 		(*bhead)->next->prev = before;
 		(*bhead)->next = (*bhead)->next->next;
 	}
-	printf("SS\n");
+	printf("ss\n");
 }
 
 void	pa(t_inlst **ahead, t_inlst **bhead)
@@ -125,7 +131,7 @@ void	pa(t_inlst **ahead, t_inlst **bhead)
 		(*bhead)->content--;
 		(*ahead)->content++;
 
-	printf("PA\n");
+	printf("pa\n");
 }
 
 void	pb(t_inlst **ahead, t_inlst **bhead)
@@ -170,7 +176,7 @@ void	pb(t_inlst **ahead, t_inlst **bhead)
 	(*bhead)->content++;
 	// printf("repeat... prev of anext : %d\n", (*ahead)->next->next->prev->content);
 
-	printf("PB\n");
+	printf("pb\n");
 
 }
 
@@ -179,7 +185,7 @@ void	ra(t_inlst **head)
 	if ((*head)->content < 2)
 		return ;
 	(*head)->next = (*head)->next->prev;
-	printf("RA\n");
+	printf("ra\n");
 }
 
 void	rb(t_inlst **head)
@@ -187,7 +193,7 @@ void	rb(t_inlst **head)
 	if ((*head)->content < 2)
 	return ;
 	(*head)->next = (*head)->next->prev;
-	printf("RB\n");
+	printf("rb\n");
 }
 
 void	rr(t_inlst **ahead, t_inlst **bhead)
@@ -196,7 +202,7 @@ void	rr(t_inlst **ahead, t_inlst **bhead)
 		return ;
 	(*ahead)->next = (*ahead)->next->prev;
 	(*bhead)->next = (*bhead)->next->prev;
-	printf("RR\n");
+	printf("rr\n");
 }
 
 void	rra(t_inlst **head)
@@ -204,7 +210,7 @@ void	rra(t_inlst **head)
 	if ((*head)->content < 2)
 		return ;
 	(*head)->next = (*head)->next->next;
-	printf("RRA\n");
+	printf("rra\n");
 }
 
 void	rrb(t_inlst **head)
@@ -212,7 +218,7 @@ void	rrb(t_inlst **head)
 	if ((*head)->content < 2)
 		return ;
 	(*head)->next = (*head)->next->next;
-	printf("RRB\n");
+	printf("rrb\n");
 }
 
 void	rrr(t_inlst **ahead, t_inlst **bhead)
@@ -221,5 +227,5 @@ void	rrr(t_inlst **ahead, t_inlst **bhead)
 		return ;
 	(*ahead)->next = (*ahead)->next->next;
 	(*bhead)->next = (*bhead)->next->next;
-	printf("RRR\n");
+	printf("rrr\n");
 }

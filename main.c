@@ -65,5 +65,5 @@ int	main(int gc, char **gv)
 	else
 		atob(ahead->content, &ahead, &bhead);
 	free_all(&ahead, &bhead);
-	return(0);
+	return (0);
 }

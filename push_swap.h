@@ -1,12 +1,12 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-#include <libft.h>
+# include <libft.h>
 
 typedef struct	s_inlst
 {
 	int			content;
-	struct	s_inlst	*next;
-	struct	s_inlst	*prev;
+	struct s_inlst	*next;
+	struct s_inlst	*prev;
 }				t_inlst;
 
 t_inlst	*ft_inlstnew(int content);

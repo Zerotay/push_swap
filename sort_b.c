@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 09:01:40 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:07:36 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:11:16 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	conquer_b(int n, t_inlst **ahead, t_inlst **bhead)
 		pa(ahead, bhead);
 	}
 	else if (n == 1)
-		pa(ahead,bhead);
+		pa(ahead, bhead);
 	return (0);
 }
 
@@ -63,14 +63,13 @@ int	rewind_stack_b(int nra, int nrb, t_inlst **ahead, t_inlst **bhead)
 	return (0);
 }
 
-
 int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 {
-	int p1;
+	int	p1;
 	int	p2;
-	int nra;
-	int npa;
-	int nrb;
+	int	nra;
+	int	npa;
+	int	nrb;
 
 	if (n < 4)
 		return (conquer_b(n, ahead, bhead));

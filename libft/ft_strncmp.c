@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 18:31:31 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:34:11 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:37:51 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
@@ -23,5 +23,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	if (i == n)
 		i--;
-	return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

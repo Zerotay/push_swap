@@ -2,7 +2,7 @@
 # define PUSH_SWAP_H
 # include <libft.h>
 
-typedef	struct		s_inlst
+typedef	struct s_inlst
 {
 	int				content;
 	struct s_inlst	*next;

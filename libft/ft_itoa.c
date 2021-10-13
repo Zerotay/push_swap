@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 13:11:31 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:34:52 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:43:38 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,24 @@ char	*ft_itoa(int n)
 	size_t	i;
 	int		j;
 
-	i = n < 0 ? 2 : 1;
+	i = 1;
+	if (n < 0)
+		i = 2;
 	j = n;
 	while (n /= 10)
 		i++;
 	ans = ft_calloc(i + 1, 1);
 	if (!ans)
 		return (0);
-	ans[0] = j < 0 ? '-' : '0';
+	ans[0] = '0';
+	if (j < 0)
+		ans[0] = '-';
 	while (j)
 	{
 		n = j % 10;
-		ans[--i] = '0' + (n < 0 ? -n : n);
+		if (n < 0)
+			n *= -1;
+		ans[--i] = '0' + n;
 		j /= 10;
 	}
 	return (ans);

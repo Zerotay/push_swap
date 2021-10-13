@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 12:11:09 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:34:30 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:37:24 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	count(char const *s, char c)
 		if (s[i] == c)
 		{
 			i++;
-			continue;
+			continue ;
 		}
 		while (s[i] != c && s[i])
 			i++;
@@ -35,7 +35,7 @@ static size_t	count(char const *s, char c)
 
 static void	stop(char **ans, size_t i)
 {
-	size_t j;
+	size_t	j;
 
 	j = -1;
 	while (++j < i)
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	i = count(s, c);
-	ans = (char**)malloc(sizeof(char*) * (i + 1));
+	ans = (char **)malloc(sizeof(char *) * (i + 1));
 	if (!ans)
 		return (0);
 	if (!make(s, c, ans, i))

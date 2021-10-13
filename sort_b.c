@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 09:01:40 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 15:33:26 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 16:47:31 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,7 @@ int	rewind_stack_b(int nra, int nrb, t_inlst **ahead, t_inlst **bhead)
 
 int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 {
-	int	p1;
-	int	p2;
+	int	p[2];
 	int	nra;
 	int	npa;
 	int	nrb;
@@ -74,15 +73,15 @@ int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 	if (n < 4)
 		return (conquer_b(n, ahead, bhead));
 	zero_init_b(&nra, &npa, &nrb);
-	init_pivot_b(&p1, &p2, ahead, bhead);
+	init_pivot_b(&p[0], &p[1], ahead, bhead);
 	while (n--)
 	{
-		if ((*bhead)->next->content < p1)
+		if ((*bhead)->next->content < p[0])
 			nrb += rb(bhead);
 		else
 		{
 			npa += pa(ahead, bhead);
-			if ((*ahead)->next->content < p2)
+			if ((*ahead)->next->content < p[1])
 				nra += ra(ahead);
 		}
 	}

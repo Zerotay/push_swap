@@ -49,8 +49,7 @@ int	rewind_stack_a(int nra, int nrb, t_inlst **ahead, t_inlst **bhead)
 
 int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 {
-	int	p1;
-	int	p2;
+	int	p[2];
 	int	nra;
 	int	npb;
 	int	nrb;
@@ -58,15 +57,15 @@ int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 	if (n < 4)
 		return (conquer_a(n, ahead, bhead));
 	zero_init_a(&nra, &npb, &nrb);
-	init_pivot_a(&p1, &p2, ahead, bhead);
+	init_pivot_a(&p[0], &p[1], ahead, bhead);
 	while (n--)
 	{
-		if ((*ahead)->next->content >= p1)
-			nra+= ra(ahead);
+		if ((*ahead)->next->content >= p[0])
+			nra += ra(ahead);
 		else
 		{
 			npb += pb(ahead, bhead);
-			if ((*bhead)->next->content > p2)
+			if ((*bhead)->next->content > p[1])
 				nrb += rb(bhead);
 		}
 	}

@@ -53,9 +53,9 @@ void	handle_few(int gc, char **gv, t_inlst **ahead)
 	curr = ft_split(gv[1], ' ');
 	i = 0;
 	while (curr[i])
-		make_inlst(ahead, curr[i++]);
-	(*ahead)->next->prev = ft_inlstlast(*ahead);
-	ft_inlstlast(*ahead)->next = (*ahead)->next;
+		i++;
+	while (i)
+		make_inlst(ahead, curr[--i]);
 }
 
 int	main(int gc, char **gv)
@@ -70,10 +70,10 @@ int	main(int gc, char **gv)
 		ahead = ft_inlstnew(0);
 		while (--gc)
 			make_inlst(&ahead, gv[gc]);
+	}
 		ahead->next->prev = ft_inlstlast(ahead);
 		ft_inlstlast(ahead)->next = ahead->next;
 		ahead->next = ahead->next->prev;
-	}
 	bhead = ft_inlstnew(0);
 	if (ahead->content == 3)
 		onlyif3(&ahead);

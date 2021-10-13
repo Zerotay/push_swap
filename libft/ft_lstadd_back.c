@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:08:12 by dongguki          #+#    #+#             */
-/*   Updated: 2021/02/23 20:56:34 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:26:52 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *curr;
+	t_list	*curr;
 
 	if (!new || !lst)
 		return ;

@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 15:31:59 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/04 20:11:09 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:28:26 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		recur(int num, int fd)
+static void	recur(int num, int fd)
 {
 	char		i;
 
@@ -24,7 +24,7 @@ static void		recur(int num, int fd)
 	ft_putchar_fd(i, fd);
 }
 
-void			ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{

@@ -13,9 +13,9 @@ t_inlst	*ft_inlstnew(int content)
 	return (s);
 }
 
-t_inlst		*ft_inlstlast(t_inlst *lst)
+t_inlst	*ft_inlstlast(t_inlst *lst)
 {
-	t_inlst		*curr;
+	t_inlst	*curr;
 
 	if (!lst)
 		return (0);
@@ -25,7 +25,7 @@ t_inlst		*ft_inlstlast(t_inlst *lst)
 	return (curr);
 }
 
-void			ft_inlstadd_back(t_inlst **lst, t_inlst *new)
+void	ft_inlstadd_back(t_inlst **lst, t_inlst *new)
 {
 	t_inlst	*curr;
 
@@ -41,7 +41,7 @@ void			ft_inlstadd_back(t_inlst **lst, t_inlst *new)
 	curr->next = new;
 }
 
-void		ft_inlstclear(t_inlst **lst)
+void	ft_inlstclear(t_inlst **lst)
 {
 	t_inlst	*curr;
 	t_inlst	*currnext;

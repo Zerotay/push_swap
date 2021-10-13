@@ -6,11 +6,24 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 13:11:31 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:43:38 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:29:20 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	check_length(int n)
+{
+	int	i;
+
+	i = 0;
+	while (n)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
+}
 
 char	*ft_itoa(int n)
 {
@@ -22,8 +35,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		i = 2;
 	j = n;
-	while (n /= 10)
-		i++;
+	i += check_length(n);
 	ans = ft_calloc(i + 1, 1);
 	if (!ans)
 		return (0);

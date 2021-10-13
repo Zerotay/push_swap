@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 13:11:31 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/10 09:39:00 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:34:52 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*ans;
 	size_t	i;

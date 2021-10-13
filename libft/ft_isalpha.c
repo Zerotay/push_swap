@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 19:15:27 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/04 19:47:42 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:34:56 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

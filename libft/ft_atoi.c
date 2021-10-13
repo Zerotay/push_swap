@@ -6,20 +6,20 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 19:05:48 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/06 22:22:19 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:35:12 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	return ((c == '\n') || (c == '\v') ||
 			(c == '\t') || (c == '\f') ||
 			(c == ' ') || (c == '\r'));
 }
 
-static void			ft_pass(const char *str, size_t *i, int *sign)
+static void	ft_pass(const char *str, size_t *i, int *sign)
 {
 	if (str[*i] == '-' || str[*i] == '+')
 	{
@@ -31,7 +31,7 @@ static void			ft_pass(const char *str, size_t *i, int *sign)
 		(*i)++;
 }
 
-int					ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	size_t				i;
 	int					sign;

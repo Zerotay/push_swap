@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 19:33:05 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/04 19:48:42 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:30:15 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

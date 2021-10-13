@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:35:26 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/04 20:50:00 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:29:27 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*curr;
 	t_list	*currnext;

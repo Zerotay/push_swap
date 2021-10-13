@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 09:01:40 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 09:01:43 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 14:07:36 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 	zero_init_b(&nra, &npa, &nrb);
 	init_pivot_b(&p1, &p2, ahead, bhead);
 	while (n--)
+	{
 		if ((*bhead)->next->content < p1)
 			nrb += rb(bhead);
 		else
@@ -85,6 +86,7 @@ int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 			if ((*ahead)->next->content < p2)
 				nra += ra(ahead);
 		}
+	}
 	atob(npa - nra, ahead, bhead);
 	rewind_stack_b(nra, nrb, ahead, bhead);
 	atob(nra, ahead, bhead);

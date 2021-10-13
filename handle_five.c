@@ -28,7 +28,6 @@ int	find_second(t_inlst *ahead)
 	return (tmp);
 }
 
-
 void	onlyif5(t_inlst **ahead, t_inlst **bhead)
 {
 	int	i;
@@ -37,6 +36,7 @@ void	onlyif5(t_inlst **ahead, t_inlst **bhead)
 	second = find_second(*ahead);
 	i = 0;
 	while (i < 2)
+	{
 		if ((*ahead)->next->content <= second)
 		{
 			pb(ahead, bhead);
@@ -44,6 +44,7 @@ void	onlyif5(t_inlst **ahead, t_inlst **bhead)
 		}
 		else
 			ra(ahead);
+	}
 	onlyif3(ahead);
 	if ((*bhead)->next->content < (*bhead)->next->prev->content)
 		sb(bhead);

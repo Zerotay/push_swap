@@ -9,7 +9,6 @@ void	onlyif3(t_inlst **ahead)
 	a = (*ahead)->next->content;
 	b = (*ahead)->next->prev->content;
 	c = (*ahead)->next->prev->prev->content;
-
 	if (a > b && a > c)
 	{
 		ra(ahead);
@@ -53,7 +52,6 @@ int	aif3(t_inlst **ahead, t_inlst **bhead)
 		sa(ahead);
 	return (0);
 }
-
 
 int	bif3(t_inlst **ahead, t_inlst **bhead)
 {

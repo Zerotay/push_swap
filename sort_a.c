@@ -1,6 +1,5 @@
 #include <push_swap.h>
 
-
 int	conquer_a(int n, t_inlst **ahead, t_inlst **bhead)
 {
 	if (n == 3)
@@ -50,17 +49,18 @@ int	rewind_stack_a(int nra, int nrb, t_inlst **ahead, t_inlst **bhead)
 
 int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 {
-	int p1;
+	int	p1;
 	int	p2;
-	int nra;
-	int npb;
-	int nrb;
+	int	nra;
+	int	npb;
+	int	nrb;
 
 	if (n < 4)
 		return (conquer_a(n, ahead, bhead));
 	zero_init_a(&nra, &npb, &nrb);
 	init_pivot_a(&p1, &p2, ahead, bhead);
 	while (n--)
+	{
 		if ((*ahead)->next->content >= p1)
 			nra += ra(ahead);
 		else
@@ -69,6 +69,7 @@ int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 			if ((*bhead)->next->content > p2)
 				nrb += rb(bhead);
 		}
+	}
 	rewind_stack_a(nra, nrb, ahead, bhead);
 	atob(nra, ahead, bhead);
 	btoa(nrb, ahead, bhead);

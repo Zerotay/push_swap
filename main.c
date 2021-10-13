@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/13 17:05:16 by dongguki          #+#    #+#             */
+/*   Updated: 2021/10/13 17:05:18 by dongguki         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <push_swap.h>
 
 void	print_error(t_inlst **head)
@@ -71,9 +83,9 @@ int	main(int gc, char **gv)
 		while (--gc)
 			make_inlst(&ahead, gv[gc]);
 	}
-		ahead->next->prev = ft_inlstlast(ahead);
-		ft_inlstlast(ahead)->next = ahead->next;
-		ahead->next = ahead->next->prev;
+	ahead->next->prev = ft_inlstlast(ahead);
+	ft_inlstlast(ahead)->next = ahead->next;
+	ahead->next = ahead->next->prev;
 	bhead = ft_inlstnew(0);
 	if (ahead->content == 3)
 		onlyif3(&ahead);

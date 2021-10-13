@@ -40,23 +40,40 @@ void	free_all(t_inlst **ahead, t_inlst **bhead)
 	free((*bhead));
 }
 
+void	handle_few(int gc, char **gv, t_inlst **ahead)
+{
+	char	**curr;
+	int		i;
+
+	if (gc == 1)
+		exit(0);
+	if (gc < 1)
+		print_error(ahead);
+	(*ahead) = ft_inlstnew(0);
+	curr = ft_split(gv[1], ' ');
+	i = 0;
+	while (curr[i])
+		make_inlst(ahead, curr[i++]);
+	(*ahead)->next->prev = ft_inlstlast(*ahead);
+	ft_inlstlast(*ahead)->next = (*ahead)->next;
+}
+
 int	main(int gc, char **gv)
 {
 	t_inlst	*ahead;
 	t_inlst	*bhead;
-	int		i;
 
-	if (gc == 1)
-		return (0);
-	if (gc < 2)
-		print_error(&ahead);
-	ahead = ft_inlstnew(0);
-	i = gc;
-	while (--i)
-		make_inlst(&ahead, gv[i]);
-	ahead->next->prev = ft_inlstlast(ahead);
-	ft_inlstlast(ahead)->next = ahead->next;
-	ahead->next = ahead->next->prev;
+	if (gc < 3)
+		handle_few(gc, gv, &ahead);
+	else
+	{
+		ahead = ft_inlstnew(0);
+		while (--gc)
+			make_inlst(&ahead, gv[gc]);
+		ahead->next->prev = ft_inlstlast(ahead);
+		ft_inlstlast(ahead)->next = ahead->next;
+		ahead->next = ahead->next->prev;
+	}
 	bhead = ft_inlstnew(0);
 	if (ahead->content == 3)
 		onlyif3(&ahead);

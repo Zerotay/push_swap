@@ -5,14 +5,13 @@ CC = gcc -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) :
-		gcc *.c -o $@ -L. -lft -I.
-
-		#  ./push_swap 5 4 8 1 6 7 3 2
-
+		make -C ./libft all bonus
+		gcc *.c -o $@ -L./libft -lft -I./libft -I.
 
 clean:
-	rm -rf push_swap
+	make -C ./libft fclean
 
 fclean: clean
+		rm -f ./push_swap
 
-re: clean all
+re: fclean all

@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 09:01:40 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 14:11:16 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:33:26 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ int	btoa(int n, t_inlst **ahead, t_inlst **bhead)
 	rewind_stack_b(nra, nrb, ahead, bhead);
 	atob(nra, ahead, bhead);
 	btoa(nrb, ahead, bhead);
+	return (0);
 }

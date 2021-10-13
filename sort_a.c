@@ -62,7 +62,7 @@ int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 	while (n--)
 	{
 		if ((*ahead)->next->content >= p1)
-			nra += ra(ahead);
+			nr a+= ra(ahead);
 		else
 		{
 			npb += pb(ahead, bhead);
@@ -74,4 +74,5 @@ int	atob(int n, t_inlst **ahead, t_inlst **bhead)
 	atob(nra, ahead, bhead);
 	btoa(nrb, ahead, bhead);
 	btoa(npb - nrb, ahead, bhead);
+	return (0);
 }

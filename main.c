@@ -6,19 +6,11 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:16 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 17:05:18 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:09:45 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
-
-void	print_error(t_inlst **head)
-{
-	write(1, "Error\n", 6);
-	ft_inlstclear(&((*head)->next));
-	free(*head);
-	exit(1);
-}
+#include "push_swap.h"
 
 void	make_inlst(t_inlst **head, char *gv)
 {
@@ -44,14 +36,6 @@ void	make_inlst(t_inlst **head, char *gv)
 	ft_inlstadd_back(head, tmp);
 }
 
-void	free_all(t_inlst **ahead, t_inlst **bhead)
-{
-	ft_inlstclear(&(*ahead)->next);
-	ft_inlstclear(&(*bhead)->next);
-	free((*ahead));
-	free((*bhead));
-}
-
 void	handle_few(int gc, char **gv, t_inlst **ahead)
 {
 	char	**curr;
@@ -68,6 +52,28 @@ void	handle_few(int gc, char **gv, t_inlst **ahead)
 		i++;
 	while (i)
 		make_inlst(ahead, curr[--i]);
+}
+
+int	check_sorted(t_inlst *ahead, t_inlst *bhead)
+{
+	int		small;
+	int		i;
+	t_inlst	*curr;
+
+	small = ahead->next->content;
+	curr = ahead->next;
+	i = ahead->content;
+	while (--i)
+	{
+		curr = curr->prev;
+		if (small < curr->content)
+			small = curr->content;
+		else
+			return (0);
+	}
+	free_all(&ahead, &bhead);
+	exit(0);
+	return (0);
 }
 
 int	main(int gc, char **gv)
@@ -87,6 +93,7 @@ int	main(int gc, char **gv)
 	ft_inlstlast(ahead)->next = ahead->next;
 	ahead->next = ahead->next->prev;
 	bhead = ft_inlstnew(0);
+	check_sorted(ahead, bhead);
 	if (ahead->content == 3)
 		onlyif3(&ahead);
 	else if (ahead->content == 5)

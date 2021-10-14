@@ -6,11 +6,11 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 09:01:40 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 17:05:46 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 23:38:57 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 int	conquer_b(int n, t_inlst **ahead, t_inlst **bhead)
 {

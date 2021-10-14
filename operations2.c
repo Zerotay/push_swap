@@ -6,11 +6,11 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:29 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 17:05:30 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 23:38:33 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 void	push(t_inlst **head, t_inlst **curr)
 {

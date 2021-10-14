@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations4.c                                      :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 17:05:35 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 23:38:43 by dongguki         ###   ########.fr       */
+/*   Created: 2021/10/14 00:00:20 by dongguki          #+#    #+#             */
+/*   Updated: 2021/10/14 00:01:12 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rra(t_inlst **head)
+void	print_error(t_inlst **head)
 {
-	(*head)->next = (*head)->next->next;
-	write(1, "rra\n", 4);
-	return (1);
+	write(1, "Error\n", 6);
+	ft_inlstclear(&((*head)->next));
+	free(*head);
+	exit(1);
 }
 
-int	rrb(t_inlst **head)
+void	free_all(t_inlst **ahead, t_inlst **bhead)
 {
-	(*head)->next = (*head)->next->next;
-	write(1, "rrb\n", 4);
-	return (1);
-}
-
-int	rrr(t_inlst **ahead, t_inlst **bhead)
-{
-	(*ahead)->next = (*ahead)->next->next;
-	(*bhead)->next = (*bhead)->next->next;
-	write(1, "rrr\n", 4);
-	return (1);
+	ft_inlstclear(&(*ahead)->next);
+	ft_inlstclear(&(*bhead)->next);
+	free((*ahead));
+	free((*bhead));
 }

@@ -6,13 +6,13 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:38 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 17:05:39 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/14 00:01:35 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include <libft.h>
+# include "libft.h"
 
 typedef struct s_inlst
 {
@@ -42,6 +42,10 @@ int		aif3(t_inlst **ahead, t_inlst **bhead);
 int		bif3(t_inlst **ahead, t_inlst **bhead);
 void	onlyif3(t_inlst **ahead);
 void	onlyif5(t_inlst **ahead, t_inlst **bhead);
+
+void	print_error(t_inlst **head);
+void	free_all(t_inlst **ahead, t_inlst **bhead);
+
 
 int		atob(int n, t_inlst **ahead, t_inlst **bhead);
 int		btoa(int n, t_inlst **ahead, t_inlst **bhead);

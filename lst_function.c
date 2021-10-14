@@ -6,11 +6,11 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:06 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 17:05:07 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/13 23:38:13 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 t_inlst	*ft_inlstnew(int content)
 {

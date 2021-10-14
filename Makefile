@@ -6,7 +6,7 @@ all: $(NAME)
 
 $(NAME) :
 		make -C ./libft all bonus
-		gcc *.c -o $@ -L./libft -lft -I./libft -I.
+		gcc *.c -o $@ -L./libft -lft -I./libft -I. -fsanitize=address
 
 clean:
 	make -C ./libft fclean

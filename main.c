@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:16 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/14 15:09:45 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:05:47 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	handle_few(int gc, char **gv, t_inlst **ahead)
 		i++;
 	while (i)
 		make_inlst(ahead, curr[--i]);
+	free_split(curr);
 }
 
 int	check_sorted(t_inlst *ahead, t_inlst *bhead)

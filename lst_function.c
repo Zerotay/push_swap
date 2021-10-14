@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:05:06 by dongguki          #+#    #+#             */
-/*   Updated: 2021/10/13 23:38:13 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:56:59 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ void	ft_inlstclear(t_inlst **lst)
 	while (curr)
 	{
 		currnext = curr->next;
+		free(curr);
 		if (currnext == *lst)
 			break ;
-		free(curr);
 		curr = currnext;
 	}
 	*lst = 0;
